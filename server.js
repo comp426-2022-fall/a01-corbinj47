@@ -32,8 +32,6 @@ fs.readFile('./public/index.html', 'utf8', (error, data) => {
 // 1. status code 200, 
 // 2. set a header with content type `text/html`, and 
 // 3. end with the data that you are reading in from ./public/index.html.
-const hostname = '127.0.0.1';
-
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/html');
@@ -43,8 +41,8 @@ const server = http.createServer((req, res) => {
 
 // Start the `server` const listening on the port defined by argument in your `port` const. 
 // Put the exact message `Server listening on port ${port}` on the console log. 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+server.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
 });
 
 // That's it! You're all done!
