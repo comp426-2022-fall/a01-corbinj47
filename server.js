@@ -21,7 +21,7 @@ const port = args.port || 3000;
 fs.readFile('./public/index.html', 'utf8', (error, data) => {
 	  if(error) {
 		  console.log(error);
-		  return
+		  return;
 	  }
 	  const tempData = data;
 });
@@ -35,7 +35,6 @@ fs.readFile('./public/index.html', 'utf8', (error, data) => {
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/html');
-  fs.readFile('./public/index.html', 'utf8', (error, data) => {
   res.end(tempData);
 });
 
