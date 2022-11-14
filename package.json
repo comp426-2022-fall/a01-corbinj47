@@ -4,7 +4,8 @@
   "description": "package contains a simple web server",
   "main": "server.js",
   "scripts": {
-    "test": "node server.js --port=5555"
+    "test": "node server.js --port=5555",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -14,7 +15,10 @@
     "web",
     "server",
     "port",
-    "http"
+    "http",
+    "node",
+    "fs",
+    "args"
   ],
   "author": "corbinj47",
   "license": "GPL-3.0-or-later",

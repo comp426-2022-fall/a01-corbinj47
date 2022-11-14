@@ -18,12 +18,12 @@ const port = args.port || 3000;
 // The stuff that should be inside this function is all below.
 // If there is an error, put it on the console error and return. 
 // Do not be nice about exiting.
-fs.readFile('./public/index.html', 'utf8', (error, data) => {
+fs.readFile(`./public/index.html`, 'utf8', (error, data) => {
 	  if(error) {
 		  console.log(error);
 		  return;
 	  }
-	  const tempData = data;
+	  tempData = data;
 });
 
 // Define a const `server` as an arrow function using http.createServer. 
@@ -34,7 +34,7 @@ fs.readFile('./public/index.html', 'utf8', (error, data) => {
 // 3. end with the data that you are reading in from ./public/index.html.
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/html');
+  res.setHeader('Content-Type', `text/html`);
   res.end(tempData);
 });
 
